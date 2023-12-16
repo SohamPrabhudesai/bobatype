@@ -21,7 +21,7 @@
     --themes-text-color: rgb(255, 255, 255);
     --themes-name-hover-color: rgb(33, 33, 33);
     
---ex: rgb(230, 84, 99);
+--ex: rgb(53, 160, 0);
 }
 .hidden{
     display: none;
@@ -86,7 +86,7 @@ body {
 }
 .wrapper {
     width: 1000px;
-    padding: 35px;
+    padding: 5px;
     margin-left: 13rem;
     margin-top: auto;
     margin-bottom: auto;
@@ -199,6 +199,21 @@ li span b {
 li:not(:first-child) span {
     font-weight: 500;
 }
+
+
+#inst button{
+    
+        background-color: var(--p-text-color);
+        border-radius: 0.1rem;
+        color: var(--main-bg-color);
+        display: inline-block;
+        font-size: .7rem;
+        line-height: .7rem;
+        margin: 0 0.5rem;
+        padding: 0.1rem 0.3rem;
+    
+}
+
 @media (max-width: 745px) {
     .wrapper {
         padding: 20px;
