@@ -48,7 +48,7 @@ backdrop.classList.add('backdrop');
 
 
 let timer;
-let maxTime = 60;
+let maxTime = 30;
 let timeLeft = maxTime;
 let charIndex = mistakes = isTyping = 0;
 
@@ -277,48 +277,57 @@ inpField.addEventListener("input", initTyping);
 coffeeBtn.addEventListener("click", function() {
     localStorage.setItem("theme", "coffee");
     setTheme();
+    hideThemeMenu();
   });
 
   defaultBtn.addEventListener('click', function() {
     localStorage.setItem("theme", "default");
     setTheme();
+    hideThemeMenu();
     
   });
 
   codeBtn.addEventListener('click', function() {
     localStorage.setItem("theme", "code");
     setTheme();
+    hideThemeMenu();
     
   });
   beachBtn.addEventListener('click', function() {
     localStorage.setItem("theme", "beach");
     setTheme();
+    hideThemeMenu();
     
   });
 
   lavenderBtn.addEventListener('click', function() {
     localStorage.setItem("theme", "lavender");
     setTheme();
+    hideThemeMenu();
     
   });
     mintyfreshBtn.addEventListener('click', function() {
     localStorage.setItem("theme", "mintyfresh");
     setTheme();
+    hideThemeMenu();
     
   });
   cherryBtn.addEventListener('click', function() {
     localStorage.setItem("theme", "cherry");
     setTheme();
+    hideThemeMenu();
     
   });
   mintchocBtn.addEventListener('click', function() {
     localStorage.setItem("theme", "mintchoc");
     setTheme();
+    hideThemeMenu();
     
   });
   cottonCandyBtn.addEventListener('click', function() {
     localStorage.setItem("theme", "cottonCandy");
     setTheme();
+    hideThemeMenu();
 });
 
 document.body.appendChild(backdrop);
@@ -331,6 +340,36 @@ window.addEventListener('keydown', event =>{
         showThemeMenu();
     }
 }});
+
+mintchocBtn.addEventListener('mouseover', mintchocTheme);
+mintchocBtn.addEventListener('mouseleave', setTheme);
+
+mintyfreshBtn.addEventListener('mouseover', mintyfreshTheme);
+mintyfreshBtn.addEventListener('mouseleave', setTheme);
+
+cherryBtn.addEventListener('mouseover', cherryTheme);
+cherryBtn.addEventListener('mouseleave', setTheme);
+
+lavenderBtn.addEventListener('mouseover', lavenderTheme);
+lavenderBtn.addEventListener('mouseleave', setTheme);
+
+coffeeBtn.addEventListener('mouseover', coffeeTheme);
+coffeeBtn.addEventListener('mouseleave', setTheme);
+
+codeBtn.addEventListener('mouseover', codeTheme);
+codeBtn.addEventListener('mouseleave', setTheme);
+
+defaultBtn.addEventListener('mouseover', defaultTheme);
+defaultBtn.addEventListener('mouseleave', setTheme);
+
+cottonCandyBtn.addEventListener('mouseover', cottonCandyTheme);
+cottonCandyBtn.addEventListener('mouseleave', setTheme);
+
+beachBtn.addEventListener('mouseover', beachTheme);
+beachBtn.addEventListener('mouseleave', setTheme);
+
+
+
 
 window.addEventListener('keydown', event =>{
     if (event.key === 'Escape')

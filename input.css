@@ -68,9 +68,12 @@ nav ul::-webkit-scrollbar {
     width: 500px;
     margin-right:auto;
     margin-left: 32rem;
+    border-width: 5px;
+    border-color: var(--p-text-color)
 }
-nav ul{height:20rem;}
+nav ul{height:20rem; padding: 5px;}
 nav ul{overflow:hidden; overflow-y:scroll;}
+nav ul button{width: 100%;}
 
 .backdrop {
     position: fixed;
@@ -100,9 +103,9 @@ nav ul{overflow:hidden; overflow-y:scroll;}
     
 }
 .wrapper {
-    width: 1000px;
+    width: 1300px;
     padding: 5px;
-    margin-left: 13rem;
+    margin-left: 4rem;
     margin-top: auto;
     margin-bottom: auto;
     background-color: var(--main-bg-color);
@@ -123,15 +126,20 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 .typing-text::-webkit-scrollbar {
     width: 0;
 }
+
 .typing-text p {
-    font-size: 21px;
+    font-size: 27px;
     text-align: justify;
     letter-spacing: 1px;
-    word-break:break-all;
     color: var(--p-text-color);
+    
 }
+
+
+
 .typing-text p span {
     position: relative;
+   
 }
 .typing-text p span.correct {
     color: var(--correct-color);
