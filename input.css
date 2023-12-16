@@ -1,0 +1,247 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --main-bg-color: rgb(30 41 59);
+    --p-text-color: rgb(71 85 105);
+    --boba-color: rgb(255 255 255);
+    --correct-color: rgb(255 255 255);
+    --incorrect-color: rgb(202, 71, 84);
+    --caret-color: rgb(0 122 204);
+    --results-color: rgb(255 255 255);
+    --themes-drawer-color: rgb(45, 52, 62) ;
+    --themes-text-color: rgb(255, 255, 255);
+    --themes-name-hover-color: rgb(33, 33, 33);
+    
+--ex: rgb(230, 84, 99);
+}
+.hidden{
+    display: none;
+}
+body {
+    background-color: var(--main-bg-color);
+    display: flex;
+    overflow: hidden;
+    background-color: var(--main-bg-color);
+    min-height: 100vh;
+    padding: 0 10px;
+    
+}
+
+
+
+#themes-wrapper{
+    position: fixed;
+    opacity: 1;
+    width: 100%;
+    height: 48rem;
+    margin-top: 15rem;
+    z-index: 1000;
+}
+
+
+
+#themes{
+    opacity: 1;
+    height: auto;
+    width: 500px;
+    margin-right:auto;
+    margin-left: 32rem;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75); /* Adjust the background color and opacity as needed */
+    z-index: 998; /* Set the z-index lower than the theme menu */
+    display: none;
+}
+
+.backdrop.active {
+    display: block;
+    filter: blur(5px); /* Adjust the blur amount as needed */
+}
+
+#themes-list{
+    color: var(--themes-text-color)
+}
+
+.result-details{
+    color: var(--results-color);
+}
+::selection {
+    color: #fff;
+    
+}
+.wrapper {
+    width: 1000px;
+    padding: 35px;
+    margin-left: 13rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: var(--main-bg-color);
+    
+    
+    
+}
+.wrapper .input-field {
+    
+    z-index: -999;
+    position: absolute;
+}
+
+.content-box .typing-text {
+    overflow: hidden;
+    max-height: 256px;
+}
+.typing-text::-webkit-scrollbar {
+    width: 0;
+}
+.typing-text p {
+    font-size: 21px;
+    text-align: justify;
+    letter-spacing: 1px;
+    word-break:break-all;
+    color: var(--p-text-color);
+}
+.typing-text p span {
+    position: relative;
+}
+.typing-text p span.correct {
+    color: var(--correct-color);
+}
+.typing-text p span.incorrect {
+    color: var(--incorrect-color);
+    
+}
+
+.typing-text p span.active::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 2px;
+    left: 0;
+    opacity: 0;
+    border-radius: 5px;
+    background: var(--caret-color);
+    animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 1;
+    }
+}
+.content-box .content {
+    margin-top: 17px;
+    display: flex;
+    height: fit-content;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.content button {
+    outline: none;
+    border: none;
+    width: 50px;
+    color: #007acc;
+    padding: 8px 0;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    background: none;
+    transition: transform 0.2s ease;
+}
+
+
+.content .result-details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: calc(100% - 140px);
+    justify-content: space-between;
+}
+.result-details li {
+    display: flex;
+    height: 20px;
+    list-style: none;
+    position: relative;
+    align-items: center;
+}
+.result-details li:not(:first-child) {
+    padding-left: 22px;
+    border-left: 2px solid var(--results-color);
+}
+.result-details li p {
+    font-size: 13px;
+}
+.result-details li span {
+    display: block;
+    font-size: 13px;
+    margin-left: 10px;
+}
+li span b {
+    font-weight: 500;
+}
+li:not(:first-child) span {
+    font-weight: 500;
+}
+@media (max-width: 745px) {
+    .wrapper {
+        padding: 20px;
+    }
+    .content-box .content {
+        padding: 20px 0;
+    }
+    .content-box .typing-text {
+        max-height: 100%;
+    }
+    .typing-text p {
+        font-size: 19px;
+        text-align: left;
+    }
+    .content button {
+        width: 100%;
+        font-size: 15px;
+        padding: 10px 0;
+        margin-top: 20px;
+    }
+    .content .result-details {
+        width: 100%;
+    }
+    .result-details li:not(:first-child) {
+        border-left: 0;
+        padding: 0;
+    }
+    .result-details li p,
+    .result-details li span {
+        font-size: 15px;
+    }
+}
+@media (max-width: 518px) {
+    .wrapper .content-box {
+        padding: 10px 15px 0;
+    }
+    .typing-text p {
+        font-size: 13px;
+    }
+    .result-details li {
+        margin-bottom: 10px;
+    }
+    .content button {
+        margin-top: 10px;
+    }
+}
