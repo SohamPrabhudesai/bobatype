@@ -203,17 +203,16 @@ li:not(:first-child) span {
 
 #inst button{
     
-        background-color: var(--p-text-color);
-        border-radius: 0.1rem;
-        color: var(--main-bg-color);
-        display: inline-block;
-        font-size: .7rem;
-        line-height: .7rem;
-        margin: 0 0.5rem;
-        padding: 0.1rem 0.3rem;
-    
-}
+    background-color: var(--p-text-color);
+    border-radius: 0.1rem;
+    color: var(--main-bg-color);
+    display: inline-block;
+    font-size: .7rem;
+    line-height: .7rem;
+    margin: 0 0.5rem;
+    padding: 0.1rem 0.3rem;
 
+}
 @media (max-width: 745px) {
     .wrapper {
         padding: 20px;
