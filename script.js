@@ -26,7 +26,7 @@ const paragraphs = [
 
 const typingText = document.querySelector(".typing-text p")
 const inpField = document.querySelector(".wrapper .input-field")
-const tryAgainBtn = document.querySelector(".content button")
+
 const timeTag = document.querySelector(".time span b")
 const mistakeTag = document.querySelector(".mistake span")
 const wpmTag = document.querySelector(".wpm span")
@@ -38,6 +38,12 @@ const themeDef = document.querySelector(":root").style
 const defaultBtn = document.getElementById("default")
 const coffeeBtn = document.getElementById("coffee")
 const codeBtn = document.getElementById("code")
+const beachBtn = document.getElementById("beach")
+const lavenderBtn = document.getElementById("lavender")
+const mintyfreshBtn = document.getElementById("mintyfresh")
+const cherryBtn = document.getElementById("cherry")
+const mintchocBtn = document.getElementById("mintchoc")
+const cottonCandyBtn = document.getElementById("cottonCandy");
 backdrop.classList.add('backdrop');
 
 
@@ -122,6 +128,19 @@ function coffeeTheme() {
    
 
 }
+function beachTheme() {
+    
+    themeDef.setProperty('--main-bg-color', 'rgb(255, 184, 124)');
+    themeDef.setProperty('--boba-color', 'rgb(51, 102, 153)');
+    themeDef.setProperty('--p-text-color', 'rgb(153, 85, 51)');
+    themeDef.setProperty('--correct-color', 'rgb(255, 255, 255)');
+    themeDef.setProperty('--incorrect-color', 'rgb(255, 102, 102)');
+    themeDef.setProperty('--results-color', 'rgb(51, 102, 153)');
+    themeDef.setProperty('--caret-color', 'rgb(255, 193, 7)');
+    
+    
+}
+
 function defaultTheme() {
     themeDef.setProperty('--main-bg-color','rgb(30 41 59)')
     themeDef.setProperty('--boba-color','rgb(255 255 255)')
@@ -131,6 +150,36 @@ function defaultTheme() {
     themeDef.setProperty('--results-color','rgb(255 255 255)')
     themeDef.setProperty('--caret-color','rgb(0 122 204)')
 }
+function lavenderTheme() {
+    themeDef.setProperty('--main-bg-color', 'rgb(200, 190, 230)');
+    themeDef.setProperty('--boba-color', 'rgb(50, 50, 100)');
+    themeDef.setProperty('--p-text-color', 'rgb(100, 84, 143)');
+    themeDef.setProperty('--correct-color', 'rgb(255, 255, 255)');
+    themeDef.setProperty('--incorrect-color', 'rgb(255, 140, 180)');
+    themeDef.setProperty('--results-color', 'rgb(50, 50, 100)');
+    themeDef.setProperty('--caret-color', 'rgb(138, 43, 226)');
+}
+
+function mintyfreshTheme() {
+    themeDef.setProperty('--main-bg-color', 'rgb(173, 255, 199)');
+    themeDef.setProperty('--boba-color', 'rgb(0, 102, 68)');
+    themeDef.setProperty('--p-text-color', 'rgb(0, 68, 45)');
+    themeDef.setProperty('--correct-color', 'rgb(255, 255, 255)');
+    themeDef.setProperty('--incorrect-color', 'rgb(255, 69, 0)');
+    themeDef.setProperty('--results-color', 'rgb(0, 102, 68)');
+    themeDef.setProperty('--caret-color', 'rgb(0, 204, 102)');
+}
+function cherryTheme() {
+    themeDef.setProperty('--main-bg-color', 'rgb(255, 223, 230)');
+    themeDef.setProperty('--boba-color', 'rgb(128, 0, 64)');
+    themeDef.setProperty('--p-text-color', 'rgb(51, 51, 51)');
+    themeDef.setProperty('--correct-color', 'rgb(210, 0, 126)');
+    themeDef.setProperty('--incorrect-color', 'rgb(90, 0, 0)');
+    themeDef.setProperty('--results-color', 'rgb(51, 51, 51)');
+    themeDef.setProperty('--caret-color', 'rgb(255, 105, 180)');
+}
+
+
 
 function codeTheme() {
     themeDef.setProperty('--main-bg-color','rgb(0,0,0)')
@@ -142,7 +191,25 @@ function codeTheme() {
     themeDef.setProperty('--caret-color','rgb(53, 160, 0)')
 
 }
+function mintchocTheme() {
+    themeDef.setProperty('--main-bg-color', 'rgb(17, 17, 17)');
+    themeDef.setProperty('--boba-color', 'rgb(255, 255, 255)');
+    themeDef.setProperty('--p-text-color', 'rgb(255, 255, 255)');
+    themeDef.setProperty('--correct-color', 'rgb(0, 255, 98)');
+    themeDef.setProperty('--incorrect-color', 'rgb(255, 69, 0)');
+    themeDef.setProperty('--results-color', 'rgb(255, 255, 255)');
+    themeDef.setProperty('--caret-color', 'rgb(0, 191, 255)');
 
+}
+function cottonCandyTheme() {
+    themeDef.setProperty('--main-bg-color', 'rgb(255, 188, 217)');
+    themeDef.setProperty('--boba-color', 'rgb(128, 0, 255)');
+    themeDef.setProperty('--p-text-color', 'rgb(51, 51, 51)');
+    themeDef.setProperty('--correct-color', 'rgb(0, 204, 255)');
+    themeDef.setProperty('--incorrect-color', 'rgb(255, 69, 0)');
+    themeDef.setProperty('--results-color', 'rgb(51, 51, 51)');
+    themeDef.setProperty('--caret-color', 'rgb(255, 105, 180)');
+}
 function showThemeMenu() {
     themesWrapper.classList.remove('hidden');
     backdrop.classList.add('active');
@@ -163,6 +230,25 @@ function setTheme() {
     }
     else if (themeName == 'default'){
         defaultTheme();
+    }
+    else if (themeName == 'beach'){
+        beachTheme();
+    }
+    else if (themeName == 'lavender'){
+        lavenderTheme();
+    }
+    else if (themeName == 'mintyfresh'){
+        mintyfreshTheme();
+    }
+    else if (themeName == 'cherry'){
+        cherryTheme();
+    }
+    else if (themeName == 'mintchoc'){
+        mintchocTheme();
+        
+    }
+    else if (themeName == 'cottonCandy'){
+        cottonCandyTheme();
     }
     else {
         defaultTheme();
@@ -186,7 +272,7 @@ loadParagraph();
 setTheme();
 
 inpField.addEventListener("input", initTyping);
-tryAgainBtn.addEventListener("click",resetGame);
+
 
 coffeeBtn.addEventListener("click", function() {
     localStorage.setItem("theme", "coffee");
@@ -204,7 +290,36 @@ coffeeBtn.addEventListener("click", function() {
     setTheme();
     
   });
+  beachBtn.addEventListener('click', function() {
+    localStorage.setItem("theme", "beach");
+    setTheme();
+    
+  });
 
+  lavenderBtn.addEventListener('click', function() {
+    localStorage.setItem("theme", "lavender");
+    setTheme();
+    
+  });
+    mintyfreshBtn.addEventListener('click', function() {
+    localStorage.setItem("theme", "mintyfresh");
+    setTheme();
+    
+  });
+  cherryBtn.addEventListener('click', function() {
+    localStorage.setItem("theme", "cherry");
+    setTheme();
+    
+  });
+  mintchocBtn.addEventListener('click', function() {
+    localStorage.setItem("theme", "mintchoc");
+    setTheme();
+    
+  });
+  cottonCandyBtn.addEventListener('click', function() {
+    localStorage.setItem("theme", "cottonCandy");
+    setTheme();
+});
 
 document.body.appendChild(backdrop);
 
@@ -216,5 +331,13 @@ window.addEventListener('keydown', event =>{
         showThemeMenu();
     }
 }});
+
+window.addEventListener('keydown', event =>{
+    if (event.key === 'Escape')
+{  
+    resetGame();
+
+}});
+
 
 

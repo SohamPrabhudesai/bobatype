@@ -15,19 +15,24 @@
     <div class="backdrop"></div>
     <div id="bobahead" class="text-[var(--boba-color)] text-5xl  py-5 px-3 font-mono h-3 w-0 z-[100]">Bobatype</div>
 
-    <div id="themes-wrapper" class="hidden justify-center items-center align-middle">
-        <div id="themes" class="bg-[--main-bg-color] py-5 rounded-lg">
-            <div id="themes-list" class="flex flex-col gap-6 font-mono">
+    <div id="themes-wrapper" class="hidden justify-center items-center align-middle overflow-auto">
+        <div id="themes" class="bg-[--main-bg-color] py-5 rounded-lg overflow-y-scroll">
+            <nav id="themes-list" class="flex flex-col gap-6 font-mono overflow-y-scroll">
                 <h2 class="flex flex-row justify-center text-xl text-[--correct-color]">Select a theme:</h2>
                 <ul class="flex flex-col gap-8 text-lg z-50">
                     <li class="flex flex-row justify-center hover:font-bold hover:bg-[--correct-color] text-[--correct-color] hover:text-[--main-bg-color]"><button id="default" >Default</button></li>
                     <li class="flex flex-row justify-center hover:font-bold hover:bg-[--correct-color] text-[--correct-color] hover:text-[--main-bg-color]"><button id="coffee" >Coffee</button></li>
-                    <li class="flex flex-row justify-center hover:font-bold hover:bg-[--correct-color] text-[--correct-color] hover:text-[--main-bg-color]"><button id="code" >Code</button></li>
-                    
+                    <li class="flex flex-row justify-center hover:font-bold hover:bg-[--correct-color] text-[--correct-color] hover:text-[--main-bg-color]"><button id="code">Code</button></li>
+                    <li class="flex flex-row justify-center hover:font-bold hover:bg-[--correct-color] text-[--correct-color] hover:text-[--main-bg-color]"><button id="beach" >Beach</button></li>
+                    <li class="flex flex-row justify-center hover:font-bold hover:bg-[--correct-color] text-[--correct-color] hover:text-[--main-bg-color]"><button id="lavender">Lavender</button></li>
+                    <li class="flex flex-row justify-center hover:font-bold hover:bg-[--correct-color] text-[--correct-color] hover:text-[--main-bg-color]"><button id="mintyfresh">Minty Fresh</button></li>
+                    <li class="flex flex-row justify-center hover:font-bold hover:bg-[--correct-color] text-[--correct-color] hover:text-[--main-bg-color]"><button id="cherry">Cherry Blossom</button></li>
+                    <li class="flex flex-row justify-center hover:font-bold hover:bg-[--correct-color] text-[--correct-color] hover:text-[--main-bg-color]"><button id="mintchoc">Mint Chocolate</button></li>
+                    <li class="flex flex-row justify-center hover:font-bold hover:bg-[--correct-color] text-[--correct-color] hover:text-[--main-bg-color]"><button id="cottonCandy">Cotton Candy</button></li>
                 </ul>
 
                 
-            </div>
+            </nav>
         </div>
     </div>
     
@@ -65,17 +70,19 @@
                         <span>0</span>
                     </li>
                 </ul>
-                <button>
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAihJREFUSEvtlruPTmEQxn9P3LMqCjQ6YSOKLUXEugsrtBJKlQiFhsY1EolKQaJQqHQ2xG3XWrGabVahWP4ACdvJrriFkUnmk/Md73vO+azYiJ3qnDPzzjPzzOU9YoZEM4TLLPBfY/7foNrM5gFbgM3AmqDnFfAEGJb0tSlljTI2M7c7CFwCVmScTwDngWuSvtUFUAtsZl3AA2BjydnreF9d+j4CbJP0pQq8EtjMFgIPgU3h5A1wAhiR5M+Y2RJgD3Aq6D8i6eq0Mjazi8DJcDIM7JM0mXJqZvOBXkkDdaCuz2ZsZksBz2oB8BJYL+lDE6dm5mecgQu5hqsCPgTcDKCtkrxzayVA7wA7gEfA3hT4T2AzW14YEQc47tQCn4HdwPfW+Eh6m6Hbe6If2FnQ3wf2l8GLwE6PN1JvRVpPgV2SPJg2iRm/B2xPnB/0BiyCt1EdNOXAfxe0FUcb+C81jhG667NYiPxx1OpThuJlQHfoFgFe47nAbeBK4cy4pHfZri5lns00E8Rh4HroDki6lbKr6mqv+WngbKqmGdCVwBjgo/jR16uk9x0BJ5rHl4Nnn5RYraPA2jA4J8kDT0rtrvZTZnY0avUcuAwMSZoK3eK4sc4APYEyBPRJSvZEtsbFEKPe7mhDKfTxaKBVpe+VjdiybZrxHOBYrEGvX0qeBSv9f+RaLGXvF4H/BPQB60L3Arghyfd5Y2mUcWNvHRjOAndA1vRM/z+qfwCjBLQfdIOpMwAAAABJRU5ErkJggg=="/>
-                </button>
+                
             </div>
         </div>
         
         
     </div>
-    <div id="inst" class="flex justify-center items-center font-mono">
+    <div id="inst" class="flex flex-col gap-1 justify-center items-center font-mono">
         <h2 class="text-[--correct-color]"> Press
-            <button class="border-2 w-1 h-1 bg-[--p-text-color] text-[--correct-color] p-2 ">Tab</button>
+            <button >Escape</button>
+            to restart test
+        </h2>
+        <h2 class="text-[--correct-color]"> Press
+            <button >Tab</button>
             to open themes
         </h2>
 
