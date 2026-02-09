@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Past Scores - Bobatype</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="input.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scores.js" defer></script>
+  </head>
+  <body class="flex-col">
+    <div id="bobahead" class="text-5xl py-5 px-3 font-mono h-3 w-0 z-[100]" style="color: var(--boba-color);">
+      Bobatype
+    </div>
+
+    <div id="command-bar" class="flex justify-center gap-6 py-4 font-mono">
+      <a href="index.html" class="transition-colors" style="color: var(--correct-color); text-decoration: none;">← back</a>
+    </div>
+
+    <div class="wrapper min-h-[500px] mx-auto" style="background-color: var(--main-bg-color);">
+      <div class="content-box">
+        <h1 class="text-3xl font-mono mb-6 text-center" style="color: var(--correct-color);">Past Scores</h1>
+        
+        <div class="flex justify-center gap-4 mb-6 font-mono">
+          <select id="filter-duration" class="rounded px-3 py-1" style="background-color: var(--main-bg-color); color: var(--correct-color); border: 1px solid var(--correct-color);">
+            <option value="all">All Durations</option>
+            <option value="15">15s</option>
+            <option value="30">30s</option>
+            <option value="60">60s</option>
+            <option value="120">120s</option>
+          </select>
+          <select id="filter-words" class="rounded px-3 py-1" style="background-color: var(--main-bg-color); color: var(--correct-color); border: 1px solid var(--correct-color);">
+            <option value="all">All Word Counts</option>
+            <option value="25">25 words</option>
+            <option value="50">50 words</option>
+            <option value="100">100 words</option>
+          </select>
+        </div>
+
+        <div class="mb-8">
+          <canvas id="wpm-chart" style="max-height: 300px;"></canvas>
+        </div>
+
+        <div id="scores-list" class="font-mono max-h-[400px] overflow-y-auto" style="color: var(--correct-color);"></div>
+        
+        <div class="flex justify-center items-center gap-4 mt-6">
+          <button id="prev-btn" class="font-mono" style="color: var(--correct-color); display: none;">← Prev</button>
+          <span id="page-info" class="font-mono" style="color: var(--p-text-color);"></span>
+          <button id="next-btn" class="font-mono" style="color: var(--correct-color); display: none;">Next →</button>
+        </div>
+
+        <div class="flex justify-center gap-4 mt-4">
+          <button id="clear-btn" class="font-mono" style="color: var(--incorrect-color);">Clear All</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

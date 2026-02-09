@@ -1,382 +1,555 @@
-const paragraphs = [
-    "Their politician was, in this moment, a notour paperback. The first armless grouse is, in its own way, a gear. The coat is a wash. However, a cake is the llama of a caravan. Snakelike armies show us how playgrounds can be viscoses. Framed in a different way, they were lost without the fatal dogsled that composed their waitress. Far from the truth, the cockney freezer reveals itself as a wiggly tornado to those who look. The first hawklike sack.",
-    "Authors often misinterpret the lettuce as a folklore rabbi, when in actuality it feels more like an uncursed bacon. Pursued distances show us how mother-in-laws can be charleses. Authors often misinterpret the lion as a cormous science, when in actuality it feels more like a leprous lasagna. Recent controversy aside, their band was, in this moment, a racemed suit. The clutch of a joke becomes a togaed chair. The first pickled chess is.",
-    "In modern times the first scrawny kitten is, in its own way, an input. An ostrich is the beginner of a roast. An appressed exhaust is a gun of the mind. A recorder is a grade from the right perspective. A hygienic is the cowbell of a skin. Few can name a dun brazil that isn't a highbrow playroom. The unwished beast comes from a thorny oxygen. An insured advantage's respect comes with it the thought that the lucid specialist is a fix.",
-    "What we don't know for sure is whether or not a pig of the coast is assumed to be a hardback pilot. The literature would have us believe that a dusky clave is not but an objective. Few can name a limbate leo that isn't a sunlit silver. The bow is a mitten. However, the drawer is a bay. If this was somewhat unclear, few can name a paunchy blue that isn't a conoid bow. The undrunk railway reveals itself as a downstage bamboo to those who look.",
-    "An aunt is a bassoon from the right perspective. As far as we can estimate, some posit the melic myanmar to be less than kutcha. One cannot separate foods from blowzy bows. The scampish closet reveals itself as a sclerous llama to those who look. A hip is the skirt of a peak. Some hempy laundries are thought of simply as orchids. A gum is a trumpet from the right perspective. A freebie flight is a wrench of the mind. Some posit the croupy.",
-    "A baby is a shingle from the right perspective. Before defenses, collars were only operations. Bails are gleesome relatives. An alloy is a streetcar's debt. A fighter of the scarecrow is assumed to be a leisured laundry. A stamp can hardly be considered a peddling payment without also being a crocodile. A skill is a meteorology's fan. Their scent was, in this moment, a hidden feeling. The competitor of a bacon becomes a boxlike cougar.",
-    "A broadband jam is a network of the mind. One cannot separate chickens from glowing periods. A production is a faucet from the right perspective. The lines could be said to resemble zincoid females. A deborah is a tractor's whale. Cod are elite japans. Some posit the wiglike norwegian to be less than plashy. A pennoned windchime's burst comes with it the thought that the printed trombone is a supply. Relations are restless tests.",
-    "In recent years, some teeming herons are thought of simply as numbers. Nowhere is it disputed that an unlaid fur is a marble of the mind. Far from the truth, few can name a glossy lier that isn't an ingrate bone. The chicken is a giraffe. They were lost without the abscessed leek that composed their fowl. An interviewer is a tussal bomb. Vanward maracas show us how scarfs can be doubts. Few can name an unguled punch that isn't pig.",
-    "A cough is a talk from the right perspective. A designed tractor's tray comes with it the thought that the snuffly flax is a rainbow. Their health was, in this moment, an earthy passbook. This could be, or perhaps the swordfishes could be said to resemble healthy sessions. A capricorn is a helium from the right perspective. However, a sled is a mailman's tennis. The competitor of an alarm becomes a toeless raincoat. Their twist was, in this moment.",
-    "Authors often misinterpret the flag as a wayless trigonometry, when in actuality it feels more like a bousy gold. Few can name a jasp oven that isn't a stutter grape. They were lost without the huffy religion that composed their booklet. Those waves are nothing more than pedestrians. Few can name a quartered semicolon that isn't a rounding scooter. Though we assume the latter, the literature would have us believe.",
-    "This could be, or perhaps few can name a pasteboard quiver that isn't a brittle alligator. A swordfish is a death's numeric. Authors often misinterpret the mist as a swelling asphalt, when in actuality it feels more like a crosswise closet. Some posit the tonal brother-in-law to be less than newborn. We know that the sizes could be said to resemble sleepwalk cycles. Before seasons, supplies were only fighters. Their stew was, in this moment.",
-    "The vision of an attempt becomes a lawny output. Dibbles are mis womens. The olden penalty reveals itself as a bustled field to those who look. Few can name a chalky force that isn't a primate literature. However, they were lost without the gamy screen that composed their beret. Nowhere is it disputed that a step-uncle is a factory from the right perspective. One cannot separate paints from dreary windows. What we don't know for sure is whether.",
-    "A tramp is a siamese from the right perspective. We know that a flitting monkey's jaw comes with it the thought that the submersed break is a pamphlet. Their cream was, in this moment, a seedy daffodil. The nest is a visitor. Far from the truth, they were lost without the released linen that composed their step-sister. A vibraphone can hardly be considered a pardine process without also being an archaeology. The bay of a hyacinth becomes.",
-    "The frosts could be said to resemble backstage chards. One cannot separate colleges from pinkish bacons. Far from the truth, the mom of a rooster becomes a chordal hydrogen. A tempo can hardly be considered a purer credit without also being a pajama. The first combined ease is, in its own way, a pantyhose. Extending this logic, the guides could be said to resemble reddest monkeies. Framed in a different way, an addle hemp is a van.",
-    "Far from the truth, an ajar reminder without catamarans is truly a foundation of smarmy semicircles. An alike board without harps is truly a satin of fated pans. A hubcap sees a parent as a painful beautician. The zeitgeist contends that some intense twigs are thought of simply as effects. A cross is a poppied tune. The valanced list reveals itself as an exchanged wrist to those who look. Recent controversy aside.",
-    "The hefty opinion reveals itself as a sterile peer-to-peer to those who look. This could be, or perhaps the watch of a diamond becomes a bosom baboon. In recent years, some posit the unstuffed road to be less than altern. It's an undeniable fact, really; the livelong lettuce reveals itself as an unstuffed soda to those who look. In ancient times a bit is a balance's season. The popcorn of a morning becomes a moonless beauty.",
-    "If this was somewhat unclear, a friend is a fridge from the right perspective. An upset carriage is a stitch of the mind. To be more specific, a temper is a pair from the right perspective. Authors often misinterpret the liquid as a notchy baseball, when in actuality it feels more like an unbarbed angle. Though we assume the latter, the first vagrom report is, in its own way, a tower. We know that the octopus of a cd becomes an unrent dahlia.",
-    "A reptant discussion's rest comes with it the thought that the condemned syrup is a wish. The drake of a wallaby becomes a sonant harp. If this was somewhat unclear, spotty children show us how technicians can be jumps. Their honey was, in this moment, an intime direction. A ship is the lion of a hate. They were lost without the croupous jeep that composed their lily. In modern times a butcher of the birth is assumed to be a spiral bean.",
-    "Those cowbells are nothing more than elements. This could be, or perhaps before stockings, thoughts were only opinions. A coil of the exclamation is assumed to be a hurtless toy. A board is the cast of a religion. In ancient times the first stinko sailboat is, in its own way, an exchange. Few can name a tutti channel that isn't a footless operation. Extending this logic, an oatmeal is the rooster of a shake. Those step-sons are nothing more than matches.",
-    "The sun dipped below the horizon, casting a warm glow on the tranquil lake. Birds chirped in harmonious symphony, creating a soothing melody. A lone figure strolled along the shoreline, lost in contemplation. Shadows danced on the water's surface, performing an ethereal ballet. The scent of pine lingered in the air, a reminder of the surrounding forest. A distant thunderclap echoed, announcing an impending storm. The world stood still, caught in a moment of suspended animation. Time unraveled, weaving tales of forgotten dreams and fleeting desires."
-
-];
-
-
-
-const typingText = document.querySelector(".typing-text p")
-const inpField = document.querySelector(".wrapper .input-field")
-
-const timeTag = document.querySelector(".time span b")
-const mistakeTag = document.querySelector(".mistake span")
-const wpmTag = document.querySelector(".wpm span")
-const cpmTag = document.querySelector(".cpm span")
-const themesWrapper = document.querySelector("#themes-wrapper")
-const mainWrapper = document.querySelector("#mainwrap")
-const backdrop = document.createElement('div')
-const themeDef = document.querySelector(":root").style
-const defaultBtn = document.getElementById("default")
-const coffeeBtn = document.getElementById("coffee")
-const codeBtn = document.getElementById("code")
-const beachBtn = document.getElementById("beach")
-const lavenderBtn = document.getElementById("lavender")
-const mintyfreshBtn = document.getElementById("mintyfresh")
-const cherryBtn = document.getElementById("cherry")
-const mintchocBtn = document.getElementById("mintchoc")
+const typingText = document.querySelector(".typing-text p");
+const inpField = document.querySelector(".wrapper .input-field");
+const timeTag = document.querySelector(".time span b");
+const mistakeTag = document.querySelector(".mistake span");
+const wpmTag = document.querySelector(".wpm span");
+const cpmTag = document.querySelector(".cpm span");
+const themesWrapper = document.querySelector("#themes-wrapper");
+const settingsWrapper = document.querySelector("#settings-wrapper");
+const mainWrapper = document.querySelector("#mainwrap");
+const backdrop = document.createElement("div");
+const themeDef = document.querySelector(":root").style;
+const themesBtn = document.getElementById("themes-btn");
+const settingsBtn = document.getElementById("settings-btn");
+const defaultBtn = document.getElementById("default");
+const coffeeBtn = document.getElementById("coffee");
+const codeBtn = document.getElementById("code");
+const beachBtn = document.getElementById("beach");
+const lavenderBtn = document.getElementById("lavender");
+const mintyfreshBtn = document.getElementById("mintyfresh");
+const cherryBtn = document.getElementById("cherry");
+const mintchocBtn = document.getElementById("mintchoc");
 const cottonCandyBtn = document.getElementById("cottonCandy");
-backdrop.classList.add('backdrop');
-
+const sunsetBtn = document.getElementById("sunset");
+const oceanBtn = document.getElementById("ocean");
+const forestBtn = document.getElementById("forest");
+const draculaBtn = document.getElementById("dracula");
+const monokaiBtn = document.getElementById("monokai");
+const hellokittyBtn = document.getElementById("hellokitty");
+const hellokittyItem = document.getElementById("hellokitty-item");
+const fontSizeSelect = document.getElementById("font-size");
+const testDurationSelect = document.getElementById("test-duration");
+const wordCountSelect = document.getElementById("word-count");
+backdrop.classList.add("backdrop");
 
 let timer;
-let maxTime = 30;
+let maxTime = parseInt(localStorage.getItem("testDuration") || "30");
 let timeLeft = maxTime;
-let charIndex = mistakes = isTyping = 0;
+let charIndex = (mistakes = isTyping = 0);
+let wordCount = parseInt(localStorage.getItem("wordCount") || "50");
 
 function loadParagraph() {
-    const ranIndex = Math.floor(Math.random() * paragraphs.length);
-    typingText.innerHTML = "";
-    paragraphs[ranIndex].split("").forEach(char => {
-        console.log(char);
-        let span = `<span>${char}</span>`
-        typingText.innerHTML += span;
-    });
-    typingText.querySelectorAll("span")[0].classList.add("active");
-    document.addEventListener("keydown", () => inpField.focus());
-    typingText.addEventListener("click", () => inpField.focus());
+  const randomWords = [];
+  for (let i = 0; i < wordCount; i++) {
+    randomWords.push(words[Math.floor(Math.random() * words.length)]);
+  }
+  const text = randomWords.join(' ');
+  
+  typingText.innerHTML = "";
+  text.split("").forEach((char) => {
+    typingText.innerHTML += `<span>${char}</span>`;
+  });
+  typingText.querySelectorAll("span")[0].classList.add("active");
+  document.addEventListener("keydown", () => inpField.focus());
+  typingText.addEventListener("click", () => inpField.focus());
+  
+  const fontSize = localStorage.getItem("fontSize") || "2rem";
+  typingText.style.fontSize = fontSize;
 }
 
 function initTyping() {
-    let characters = typingText.querySelectorAll("span");
-    let typedChar = inpField.value.split("")[charIndex];
-    if (charIndex < characters.length - 1 && timeLeft > 0) {
-        if (!isTyping) {
-            timer = setInterval(initTimer, 1000);
-            isTyping = true;
-        }
-        if (typedChar == null) {
-            if (charIndex > 0) {
-                charIndex--;
-                if (characters[charIndex].classList.contains("incorrect")) {
-                    mistakes--;
-                }
-                characters[charIndex].classList.remove("correct", "incorrect");
-            }
-        } else {
-            if (characters[charIndex].innerText == typedChar) {
-                characters[charIndex].classList.add("correct");
-            } else {
-                mistakes++;
-                characters[charIndex].classList.add("incorrect");
-            }
-            charIndex++;
-        }
-        characters.forEach(span => span.classList.remove("active"));
-        characters[charIndex].classList.add("active");
-
-        let wpm = Math.round(((charIndex - mistakes) / 5) / (maxTime - timeLeft) * 60);
-        wpm = wpm < 0 || !wpm || wpm === Infinity ? 0: wpm;
-
-        wpmTag.innerText = wpm;
-        mistakeTag.innerText = mistakes;
-        cpmTag.innerText = charIndex - mistakes;
-    } else {
-        clearInterval(timer);
-        inpField.value = "";
+  let characters = typingText.querySelectorAll("span");
+  let typedChar = inpField.value.split("")[charIndex];
+  if (charIndex < characters.length - 1 && timeLeft > 0) {
+    if (!isTyping) {
+      timer = setInterval(initTimer, 1000);
+      isTyping = true;
     }
+    if (typedChar == null) {
+      if (charIndex > 0) {
+        charIndex--;
+        if (characters[charIndex].classList.contains("incorrect")) {
+          mistakes--;
+        }
+        characters[charIndex].classList.remove("correct", "incorrect");
+      }
+    } else {
+      if (characters[charIndex].innerText == typedChar) {
+        characters[charIndex].classList.add("correct");
+      } else {
+        mistakes++;
+        characters[charIndex].classList.add("incorrect");
+      }
+      charIndex++;
+    }
+    characters.forEach((span) => span.classList.remove("active"));
+    characters[charIndex].classList.add("active");
+
+    let wpm = Math.round(
+      ((charIndex - mistakes) / 5 / (maxTime - timeLeft)) * 60,
+    );
+    wpm = wpm < 0 || !wpm || wpm === Infinity ? 0 : wpm;
+
+    wpmTag.innerText = wpm;
+    mistakeTag.innerText = mistakes;
+    cpmTag.innerText = charIndex - mistakes;
+  } else {
+    clearInterval(timer);
+    if (isTyping) {
+      let finalWpm = Math.round(((charIndex - mistakes) / 5 / (maxTime - timeLeft)) * 60);
+      saveScore(finalWpm, charIndex - mistakes, mistakes);
+    }
+    inpField.value = "";
+  }
 }
 
 function initTimer() {
-    if (timeLeft > 0) {
-        timeLeft--;
-        timeTag.innerText = timeLeft;
-        let wpm = Math.round(((charIndex - mistakes) / 5) / (maxTime - timeLeft) * 60);
-        wpmTag.innerText = wpm;
-    } else {
-        clearInterval(timer);
-    }
+  if (timeLeft > 0) {
+    timeLeft--;
+    timeTag.innerText = timeLeft;
+    let wpm = Math.round(
+      ((charIndex - mistakes) / 5 / (maxTime - timeLeft)) * 60,
+    );
+    wpmTag.innerText = wpm;
+  } else {
+    clearInterval(timer);
+    let finalWpm = Math.round(((charIndex - mistakes) / 5 / maxTime) * 60);
+    saveScore(finalWpm, charIndex - mistakes, mistakes);
+  }
+}
+
+function saveScore(wpm, cpm, mistakes) {
+  const scores = JSON.parse(localStorage.getItem("scores") || "[]");
+  scores.push({
+    wpm,
+    cpm,
+    mistakes,
+    duration: maxTime,
+    wordCount: wordCount,
+    date: new Date().toLocaleString(),
+  });
+  localStorage.setItem("scores", JSON.stringify(scores));
 }
 
 function coffeeTheme() {
-    themeDef.setProperty('--main-bg-color','#CEB18D')
-    themeDef.setProperty('--boba-color','rgb(25 16 14)')
-    themeDef.setProperty('--p-text-color','rgb(255 255 255)')
-    themeDef.setProperty('--correct-color','rgb(25 16 14)')
-    themeDef.setProperty('--incorrect-color','rgb(230, 84, 99)')
-    themeDef.setProperty('--results-color','rgb(25 16 14)')
-    themeDef.setProperty('--caret-color','rgb(25 16 14)')
-    
-   
-
+  themeDef.setProperty("--main-bg-color", "#CEB18D");
+  themeDef.setProperty("--boba-color", "rgb(25 16 14)");
+  themeDef.setProperty("--p-text-color", "rgb(255 255 255)");
+  themeDef.setProperty("--correct-color", "rgb(25 16 14)");
+  themeDef.setProperty("--incorrect-color", "rgb(230, 84, 99)");
+  themeDef.setProperty("--results-color", "rgb(25 16 14)");
+  themeDef.setProperty("--caret-color", "rgb(25 16 14)");
 }
 function beachTheme() {
-    
-    themeDef.setProperty('--main-bg-color', 'rgb(255, 184, 124)');
-    themeDef.setProperty('--boba-color', 'rgb(51, 102, 153)');
-    themeDef.setProperty('--p-text-color', 'rgb(153, 85, 51)');
-    themeDef.setProperty('--correct-color', 'rgb(255, 255, 255)');
-    themeDef.setProperty('--incorrect-color', 'rgb(255, 102, 102)');
-    themeDef.setProperty('--results-color', 'rgb(51, 102, 153)');
-    themeDef.setProperty('--caret-color', 'rgb(255, 193, 7)');
-    
-    
+  themeDef.setProperty("--main-bg-color", "rgb(255, 184, 124)");
+  themeDef.setProperty("--boba-color", "rgb(51, 102, 153)");
+  themeDef.setProperty("--p-text-color", "rgb(153, 85, 51)");
+  themeDef.setProperty("--correct-color", "rgb(255, 255, 255)");
+  themeDef.setProperty("--incorrect-color", "rgb(255, 102, 102)");
+  themeDef.setProperty("--results-color", "rgb(51, 102, 153)");
+  themeDef.setProperty("--caret-color", "rgb(255, 193, 7)");
 }
 
 function defaultTheme() {
-    themeDef.setProperty('--main-bg-color','rgb(30 41 59)')
-    themeDef.setProperty('--boba-color','rgb(255 255 255)')
-    themeDef.setProperty('--p-text-color','rgb(71 85 105)')
-    themeDef.setProperty('--correct-color','rgb(255 255 255)')
-    themeDef.setProperty('--incorrect-color','rgb(202, 71, 84)')
-    themeDef.setProperty('--results-color','rgb(255 255 255)')
-    themeDef.setProperty('--caret-color','rgb(0 122 204)')
+  themeDef.setProperty("--main-bg-color", "rgb(30 41 59)");
+  themeDef.setProperty("--boba-color", "rgb(255 255 255)");
+  themeDef.setProperty("--p-text-color", "rgb(71 85 105)");
+  themeDef.setProperty("--correct-color", "rgb(255 255 255)");
+  themeDef.setProperty("--incorrect-color", "rgb(202, 71, 84)");
+  themeDef.setProperty("--results-color", "rgb(255 255 255)");
+  themeDef.setProperty("--caret-color", "rgb(0 122 204)");
 }
 function lavenderTheme() {
-    themeDef.setProperty('--main-bg-color', 'rgb(200, 190, 230)');
-    themeDef.setProperty('--boba-color', 'rgb(50, 50, 100)');
-    themeDef.setProperty('--p-text-color', 'rgb(100, 84, 143)');
-    themeDef.setProperty('--correct-color', 'rgb(255, 255, 255)');
-    themeDef.setProperty('--incorrect-color', 'rgb(255, 140, 180)');
-    themeDef.setProperty('--results-color', 'rgb(50, 50, 100)');
-    themeDef.setProperty('--caret-color', 'rgb(138, 43, 226)');
+  themeDef.setProperty("--main-bg-color", "rgb(200, 190, 230)");
+  themeDef.setProperty("--boba-color", "rgb(50, 50, 100)");
+  themeDef.setProperty("--p-text-color", "rgb(100, 84, 143)");
+  themeDef.setProperty("--correct-color", "rgb(255, 255, 255)");
+  themeDef.setProperty("--incorrect-color", "rgb(255, 140, 180)");
+  themeDef.setProperty("--results-color", "rgb(50, 50, 100)");
+  themeDef.setProperty("--caret-color", "rgb(138, 43, 226)");
 }
 
 function mintyfreshTheme() {
-    themeDef.setProperty('--main-bg-color', 'rgb(173, 255, 199)');
-    themeDef.setProperty('--boba-color', 'rgb(0, 102, 68)');
-    themeDef.setProperty('--p-text-color', 'rgb(0, 68, 45)');
-    themeDef.setProperty('--correct-color', 'rgb(255, 255, 255)');
-    themeDef.setProperty('--incorrect-color', 'rgb(255, 69, 0)');
-    themeDef.setProperty('--results-color', 'rgb(0, 102, 68)');
-    themeDef.setProperty('--caret-color', 'rgb(0, 204, 102)');
+  themeDef.setProperty("--main-bg-color", "rgb(173, 255, 199)");
+  themeDef.setProperty("--boba-color", "rgb(0, 102, 68)");
+  themeDef.setProperty("--p-text-color", "rgb(0, 68, 45)");
+  themeDef.setProperty("--correct-color", "rgb(255, 255, 255)");
+  themeDef.setProperty("--incorrect-color", "rgb(255, 69, 0)");
+  themeDef.setProperty("--results-color", "rgb(0, 102, 68)");
+  themeDef.setProperty("--caret-color", "rgb(0, 204, 102)");
 }
 function cherryTheme() {
-    themeDef.setProperty('--main-bg-color', 'rgb(255, 223, 230)');
-    themeDef.setProperty('--boba-color', 'rgb(128, 0, 64)');
-    themeDef.setProperty('--p-text-color', 'rgb(51, 51, 51)');
-    themeDef.setProperty('--correct-color', 'rgb(210, 0, 126)');
-    themeDef.setProperty('--incorrect-color', 'rgb(90, 0, 0)');
-    themeDef.setProperty('--results-color', 'rgb(51, 51, 51)');
-    themeDef.setProperty('--caret-color', 'rgb(255, 105, 180)');
+  themeDef.setProperty("--main-bg-color", "rgb(255, 223, 230)");
+  themeDef.setProperty("--boba-color", "rgb(128, 0, 64)");
+  themeDef.setProperty("--p-text-color", "rgb(51, 51, 51)");
+  themeDef.setProperty("--correct-color", "rgb(210, 0, 126)");
+  themeDef.setProperty("--incorrect-color", "rgb(90, 0, 0)");
+  themeDef.setProperty("--results-color", "rgb(51, 51, 51)");
+  themeDef.setProperty("--caret-color", "rgb(255, 105, 180)");
 }
-
-
 
 function codeTheme() {
-    themeDef.setProperty('--main-bg-color','rgb(0,0,0)')
-    themeDef.setProperty('--boba-color','rgb(53, 160, 0)')
-    themeDef.setProperty('--p-text-color','rgb(22, 65, 0)')
-    themeDef.setProperty('--correct-color','rgb(53, 160, 0)')
-    themeDef.setProperty('--incorrect-color','rgb(202, 71, 84)')
-    themeDef.setProperty('--results-color','rgb(22, 65, 0)')
-    themeDef.setProperty('--caret-color','rgb(53, 160, 0)')
-
+  themeDef.setProperty("--main-bg-color", "rgb(0,0,0)");
+  themeDef.setProperty("--boba-color", "rgb(53, 160, 0)");
+  themeDef.setProperty("--p-text-color", "rgb(22, 65, 0)");
+  themeDef.setProperty("--correct-color", "rgb(53, 160, 0)");
+  themeDef.setProperty("--incorrect-color", "rgb(202, 71, 84)");
+  themeDef.setProperty("--results-color", "rgb(22, 65, 0)");
+  themeDef.setProperty("--caret-color", "rgb(53, 160, 0)");
 }
 function mintchocTheme() {
-    themeDef.setProperty('--main-bg-color', 'rgb(17, 17, 17)');
-    themeDef.setProperty('--boba-color', 'rgb(255, 255, 255)');
-    themeDef.setProperty('--p-text-color', 'rgb(255, 255, 255)');
-    themeDef.setProperty('--correct-color', 'rgb(0, 255, 98)');
-    themeDef.setProperty('--incorrect-color', 'rgb(255, 69, 0)');
-    themeDef.setProperty('--results-color', 'rgb(255, 255, 255)');
-    themeDef.setProperty('--caret-color', 'rgb(0, 191, 255)');
-
+  themeDef.setProperty("--main-bg-color", "rgb(17, 17, 17)");
+  themeDef.setProperty("--boba-color", "rgb(255, 255, 255)");
+  themeDef.setProperty("--p-text-color", "rgb(255, 255, 255)");
+  themeDef.setProperty("--correct-color", "rgb(0, 255, 98)");
+  themeDef.setProperty("--incorrect-color", "rgb(255, 69, 0)");
+  themeDef.setProperty("--results-color", "rgb(255, 255, 255)");
+  themeDef.setProperty("--caret-color", "rgb(0, 191, 255)");
 }
 function cottonCandyTheme() {
-    themeDef.setProperty('--main-bg-color', 'rgb(255, 188, 217)');
-    themeDef.setProperty('--boba-color', 'rgb(128, 0, 255)');
-    themeDef.setProperty('--p-text-color', 'rgb(51, 51, 51)');
-    themeDef.setProperty('--correct-color', 'rgb(0, 204, 255)');
-    themeDef.setProperty('--incorrect-color', 'rgb(255, 69, 0)');
-    themeDef.setProperty('--results-color', 'rgb(51, 51, 51)');
-    themeDef.setProperty('--caret-color', 'rgb(255, 105, 180)');
-}
-function showThemeMenu() {
-    themesWrapper.classList.remove('hidden');
-    backdrop.classList.add('active');
+  themeDef.setProperty("--main-bg-color", "rgb(255, 188, 217)");
+  themeDef.setProperty("--boba-color", "rgb(128, 0, 255)");
+  themeDef.setProperty("--p-text-color", "rgb(51, 51, 51)");
+  themeDef.setProperty("--correct-color", "rgb(0, 204, 255)");
+  themeDef.setProperty("--incorrect-color", "rgb(255, 69, 0)");
+  themeDef.setProperty("--results-color", "rgb(51, 51, 51)");
+  themeDef.setProperty("--caret-color", "rgb(255, 105, 180)");
 }
 
-function hideThemeMenu() {
-    themesWrapper.classList.add('hidden');
-    backdrop.classList.remove('active');
+function sunsetTheme() {
+  themeDef.setProperty("--main-bg-color", "rgb(255, 94, 77)");
+  themeDef.setProperty("--boba-color", "rgb(255, 223, 0)");
+  themeDef.setProperty("--p-text-color", "rgb(255, 179, 71)");
+  themeDef.setProperty("--correct-color", "rgb(255, 255, 255)");
+  themeDef.setProperty("--incorrect-color", "rgb(139, 0, 0)");
+  themeDef.setProperty("--results-color", "rgb(255, 255, 255)");
+  themeDef.setProperty("--caret-color", "rgb(255, 223, 0)");
+}
+
+function oceanTheme() {
+  themeDef.setProperty("--main-bg-color", "rgb(0, 105, 148)");
+  themeDef.setProperty("--boba-color", "rgb(0, 180, 216)");
+  themeDef.setProperty("--p-text-color", "rgb(144, 224, 239)");
+  themeDef.setProperty("--correct-color", "rgb(255, 255, 255)");
+  themeDef.setProperty("--incorrect-color", "rgb(255, 87, 51)");
+  themeDef.setProperty("--results-color", "rgb(255, 255, 255)");
+  themeDef.setProperty("--caret-color", "rgb(0, 180, 216)");
+}
+
+function forestTheme() {
+  themeDef.setProperty("--main-bg-color", "rgb(34, 139, 34)");
+  themeDef.setProperty("--boba-color", "rgb(144, 238, 144)");
+  themeDef.setProperty("--p-text-color", "rgb(152, 251, 152)");
+  themeDef.setProperty("--correct-color", "rgb(255, 255, 255)");
+  themeDef.setProperty("--incorrect-color", "rgb(255, 69, 0)");
+  themeDef.setProperty("--results-color", "rgb(255, 255, 255)");
+  themeDef.setProperty("--caret-color", "rgb(173, 255, 47)");
+}
+
+function draculaTheme() {
+  themeDef.setProperty("--main-bg-color", "rgb(40, 42, 54)");
+  themeDef.setProperty("--boba-color", "rgb(189, 147, 249)");
+  themeDef.setProperty("--p-text-color", "rgb(98, 114, 164)");
+  themeDef.setProperty("--correct-color", "rgb(80, 250, 123)");
+  themeDef.setProperty("--incorrect-color", "rgb(255, 85, 85)");
+  themeDef.setProperty("--results-color", "rgb(248, 248, 242)");
+  themeDef.setProperty("--caret-color", "rgb(255, 121, 198)");
+}
+
+function monokaiTheme() {
+  themeDef.setProperty("--main-bg-color", "rgb(39, 40, 34)");
+  themeDef.setProperty("--boba-color", "rgb(249, 38, 114)");
+  themeDef.setProperty("--p-text-color", "rgb(117, 113, 94)");
+  themeDef.setProperty("--correct-color", "rgb(166, 226, 46)");
+  themeDef.setProperty("--incorrect-color", "rgb(249, 38, 114)");
+  themeDef.setProperty("--results-color", "rgb(248, 248, 240)");
+  themeDef.setProperty("--caret-color", "rgb(102, 217, 239)");
+}
+
+function hellokittyTheme() {
+  themeDef.setProperty("--main-bg-color", "rgb(255, 182, 193)");
+  themeDef.setProperty("--boba-color", "rgb(255, 20, 147)");
+  themeDef.setProperty("--p-text-color", "rgb(255, 105, 180)");
+  themeDef.setProperty("--correct-color", "rgb(255, 255, 255)");
+  themeDef.setProperty("--incorrect-color", "rgb(220, 20, 60)");
+  themeDef.setProperty("--results-color", "rgb(255, 255, 255)");
+  themeDef.setProperty("--caret-color", "rgb(255, 20, 147)");
+}
+function showThemeMenu() {
+  hideAllMenus();
+  themesWrapper.classList.remove("hidden");
+  backdrop.classList.add("active");
+}
+
+function showSettingsMenu() {
+  hideAllMenus();
+  settingsWrapper.classList.remove("hidden");
+  backdrop.classList.add("active");
+}
+
+function hideAllMenus() {
+  themesWrapper.classList.add("hidden");
+  settingsWrapper.classList.add("hidden");
+  backdrop.classList.remove("active");
 }
 
 function setTheme() {
-    let themeName = localStorage.getItem("theme");
-    if (themeName == "code") {
-        codeTheme();
-    }
-    else if (themeName == 'coffee') {
-        coffeeTheme();
-    }
-    else if (themeName == 'default'){
-        defaultTheme();
-    }
-    else if (themeName == 'beach'){
-        beachTheme();
-    }
-    else if (themeName == 'lavender'){
-        lavenderTheme();
-    }
-    else if (themeName == 'mintyfresh'){
-        mintyfreshTheme();
-    }
-    else if (themeName == 'cherry'){
-        cherryTheme();
-    }
-    else if (themeName == 'mintchoc'){
-        mintchocTheme();
-        
-    }
-    else if (themeName == 'cottonCandy'){
-        cottonCandyTheme();
-    }
-    else {
-        defaultTheme();
-    }
+  let themeName = localStorage.getItem("theme");
+  const secretHint = document.getElementById("secret-hint");
+  
+  if (secretHint) {
+    secretHint.style.display = themeName === "hellokitty" ? "inline" : "none";
+  }
+  
+  if (themeName == "code") {
+    codeTheme();
+  } else if (themeName == "coffee") {
+    coffeeTheme();
+  } else if (themeName == "default") {
+    defaultTheme();
+  } else if (themeName == "beach") {
+    beachTheme();
+  } else if (themeName == "lavender") {
+    lavenderTheme();
+  } else if (themeName == "mintyfresh") {
+    mintyfreshTheme();
+  } else if (themeName == "cherry") {
+    cherryTheme();
+  } else if (themeName == "mintchoc") {
+    mintchocTheme();
+  } else if (themeName == "cottonCandy") {
+    cottonCandyTheme();
+  } else if (themeName == "sunset") {
+    sunsetTheme();
+  } else if (themeName == "ocean") {
+    oceanTheme();
+  } else if (themeName == "forest") {
+    forestTheme();
+  } else if (themeName == "dracula") {
+    draculaTheme();
+  } else if (themeName == "monokai") {
+    monokaiTheme();
+  } else if (themeName == "hellokitty") {
+    hellokittyTheme();
+  } else {
+    defaultTheme();
+  }
 }
 
-
 function resetGame() {
-    loadParagraph();
-    clearInterval(timer);
-    timeLeft = maxTime;
-    charIndex = mistakes = isTyping = 0;
-    inpField.value = "";
-    timeTag.innerText = timeLeft;
-    wpmTag.innerText = 0;
-    mistakeTag.innerText = 0;
-    cpmTag.innerText = 0;
+  loadParagraph();
+  clearInterval(timer);
+  maxTime = parseInt(localStorage.getItem("testDuration") || "30");
+  wordCount = parseInt(localStorage.getItem("wordCount") || "50");
+  timeLeft = maxTime;
+  charIndex = mistakes = isTyping = 0;
+  inpField.value = "";
+  timeTag.innerText = timeLeft;
+  wpmTag.innerText = 0;
+  mistakeTag.innerText = 0;
+  cpmTag.innerText = 0;
 }
 
 loadParagraph();
 setTheme();
+timeTag.innerText = maxTime;
+
+themesBtn.addEventListener("click", showThemeMenu);
+settingsBtn.addEventListener("click", showSettingsMenu);
+
+fontSizeSelect.value = localStorage.getItem("fontSize") || "2rem";
+testDurationSelect.value = localStorage.getItem("testDuration") || "30";
+wordCountSelect.value = localStorage.getItem("wordCount") || "50";
+
+fontSizeSelect.addEventListener("change", (e) => {
+  localStorage.setItem("fontSize", e.target.value);
+  typingText.style.fontSize = e.target.value;
+});
+
+testDurationSelect.addEventListener("change", (e) => {
+  localStorage.setItem("testDuration", e.target.value);
+  resetGame();
+});
+
+wordCountSelect.addEventListener("change", (e) => {
+  localStorage.setItem("wordCount", e.target.value);
+  resetGame();
+});
 
 inpField.addEventListener("input", initTyping);
 
+coffeeBtn.addEventListener("click", function () {
+  localStorage.setItem("theme", "coffee");
+  setTheme();
+  hideThemeMenu();
+});
 
-coffeeBtn.addEventListener("click", function() {
-    localStorage.setItem("theme", "coffee");
-    setTheme();
-    hideThemeMenu();
-  });
+defaultBtn.addEventListener("click", function () {
+  localStorage.setItem("theme", "default");
+  setTheme();
+  hideThemeMenu();
+});
 
-  defaultBtn.addEventListener('click', function() {
-    localStorage.setItem("theme", "default");
-    setTheme();
-    hideThemeMenu();
-    
-  });
+codeBtn.addEventListener("click", function () {
+  localStorage.setItem("theme", "code");
+  setTheme();
+  hideThemeMenu();
+});
+beachBtn.addEventListener("click", function () {
+  localStorage.setItem("theme", "beach");
+  setTheme();
+  hideThemeMenu();
+});
 
-  codeBtn.addEventListener('click', function() {
-    localStorage.setItem("theme", "code");
-    setTheme();
-    hideThemeMenu();
-    
-  });
-  beachBtn.addEventListener('click', function() {
-    localStorage.setItem("theme", "beach");
-    setTheme();
-    hideThemeMenu();
-    
-  });
+lavenderBtn.addEventListener("click", function () {
+  localStorage.setItem("theme", "lavender");
+  setTheme();
+  hideThemeMenu();
+});
+mintyfreshBtn.addEventListener("click", function () {
+  localStorage.setItem("theme", "mintyfresh");
+  setTheme();
+  hideThemeMenu();
+});
+cherryBtn.addEventListener("click", function () {
+  localStorage.setItem("theme", "cherry");
+  setTheme();
+  hideThemeMenu();
+});
+mintchocBtn.addEventListener("click", function () {
+  localStorage.setItem("theme", "mintchoc");
+  setTheme();
+  hideThemeMenu();
+});
+cottonCandyBtn.addEventListener("click", function () {
+  localStorage.setItem("theme", "cottonCandy");
+  setTheme();
+  hideThemeMenu();
+});
 
-  lavenderBtn.addEventListener('click', function() {
-    localStorage.setItem("theme", "lavender");
-    setTheme();
-    hideThemeMenu();
-    
-  });
-    mintyfreshBtn.addEventListener('click', function() {
-    localStorage.setItem("theme", "mintyfresh");
-    setTheme();
-    hideThemeMenu();
-    
-  });
-  cherryBtn.addEventListener('click', function() {
-    localStorage.setItem("theme", "cherry");
-    setTheme();
-    hideThemeMenu();
-    
-  });
-  mintchocBtn.addEventListener('click', function() {
-    localStorage.setItem("theme", "mintchoc");
-    setTheme();
-    hideThemeMenu();
-    
-  });
-  cottonCandyBtn.addEventListener('click', function() {
-    localStorage.setItem("theme", "cottonCandy");
-    setTheme();
-    hideThemeMenu();
+sunsetBtn.addEventListener("click", function () {
+  localStorage.setItem("theme", "sunset");
+  setTheme();
+  hideThemeMenu();
+});
+
+oceanBtn.addEventListener("click", function () {
+  localStorage.setItem("theme", "ocean");
+  setTheme();
+  hideThemeMenu();
+});
+
+forestBtn.addEventListener("click", function () {
+  localStorage.setItem("theme", "forest");
+  setTheme();
+  hideThemeMenu();
+});
+
+draculaBtn.addEventListener("click", function () {
+  localStorage.setItem("theme", "dracula");
+  setTheme();
+  hideThemeMenu();
+});
+
+monokaiBtn.addEventListener("click", function () {
+  localStorage.setItem("theme", "monokai");
+  setTheme();
+  hideThemeMenu();
+});
+
+hellokittyBtn.addEventListener("click", function () {
+  localStorage.setItem("theme", "hellokitty");
+  setTheme();
+  hideThemeMenu();
+});
+
+let secretCode = '';
+let secretTimeout;
+
+window.addEventListener('keydown', (event) => {
+  if (themesWrapper.classList.contains('hidden')) {
+    secretCode = '';
+    return;
+  }
+  
+  clearTimeout(secretTimeout);
+  secretCode += event.key.toLowerCase();
+  
+  if (secretCode.includes('nini')) {
+    hellokittyItem.classList.remove('hidden');
+    hellokittyItem.classList.add('flex');
+    secretCode = '';
+  }
+  
+  secretTimeout = setTimeout(() => {
+    secretCode = '';
+  }, 1000);
 });
 
 document.body.appendChild(backdrop);
 
-window.addEventListener('keydown', event =>{
-    if (event.key === 'Tab')
-{    if (backdrop.classList.contains('active')) {
-        hideThemeMenu();
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Tab") {
+    event.preventDefault();
+    if (backdrop.classList.contains("active")) {
+      hideAllMenus();
     } else {
-        showThemeMenu();
+      showThemeMenu();
     }
-}});
+  }
+});
 
-mintchocBtn.addEventListener('mouseover', mintchocTheme);
-mintchocBtn.addEventListener('mouseleave', setTheme);
+mintchocBtn.addEventListener("mouseover", mintchocTheme);
+mintchocBtn.addEventListener("mouseleave", setTheme);
 
-mintyfreshBtn.addEventListener('mouseover', mintyfreshTheme);
-mintyfreshBtn.addEventListener('mouseleave', setTheme);
+mintyfreshBtn.addEventListener("mouseover", mintyfreshTheme);
+mintyfreshBtn.addEventListener("mouseleave", setTheme);
 
-cherryBtn.addEventListener('mouseover', cherryTheme);
-cherryBtn.addEventListener('mouseleave', setTheme);
+cherryBtn.addEventListener("mouseover", cherryTheme);
+cherryBtn.addEventListener("mouseleave", setTheme);
 
-lavenderBtn.addEventListener('mouseover', lavenderTheme);
-lavenderBtn.addEventListener('mouseleave', setTheme);
+lavenderBtn.addEventListener("mouseover", lavenderTheme);
+lavenderBtn.addEventListener("mouseleave", setTheme);
 
-coffeeBtn.addEventListener('mouseover', coffeeTheme);
-coffeeBtn.addEventListener('mouseleave', setTheme);
+coffeeBtn.addEventListener("mouseover", coffeeTheme);
+coffeeBtn.addEventListener("mouseleave", setTheme);
 
-codeBtn.addEventListener('mouseover', codeTheme);
-codeBtn.addEventListener('mouseleave', setTheme);
+codeBtn.addEventListener("mouseover", codeTheme);
+codeBtn.addEventListener("mouseleave", setTheme);
 
-defaultBtn.addEventListener('mouseover', defaultTheme);
-defaultBtn.addEventListener('mouseleave', setTheme);
+defaultBtn.addEventListener("mouseover", defaultTheme);
+defaultBtn.addEventListener("mouseleave", setTheme);
 
-cottonCandyBtn.addEventListener('mouseover', cottonCandyTheme);
-cottonCandyBtn.addEventListener('mouseleave', setTheme);
+cottonCandyBtn.addEventListener("mouseover", cottonCandyTheme);
+cottonCandyBtn.addEventListener("mouseleave", setTheme);
 
-beachBtn.addEventListener('mouseover', beachTheme);
-beachBtn.addEventListener('mouseleave', setTheme);
+beachBtn.addEventListener("mouseover", beachTheme);
+beachBtn.addEventListener("mouseleave", setTheme);
 
+sunsetBtn.addEventListener("mouseover", sunsetTheme);
+sunsetBtn.addEventListener("mouseleave", setTheme);
 
+oceanBtn.addEventListener("mouseover", oceanTheme);
+oceanBtn.addEventListener("mouseleave", setTheme);
 
+forestBtn.addEventListener("mouseover", forestTheme);
+forestBtn.addEventListener("mouseleave", setTheme);
 
-window.addEventListener('keydown', event =>{
-    if (event.key === 'Escape')
-{  
-    resetGame();
+draculaBtn.addEventListener("mouseover", draculaTheme);
+draculaBtn.addEventListener("mouseleave", setTheme);
 
-}});
+monokaiBtn.addEventListener("mouseover", monokaiTheme);
+monokaiBtn.addEventListener("mouseleave", setTheme);
 
+hellokittyBtn.addEventListener("mouseover", hellokittyTheme);
+hellokittyBtn.addEventListener("mouseleave", setTheme);
 
-
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    if (backdrop.classList.contains("active")) {
+      hideAllMenus();
+    } else {
+      resetGame();
+    }
+  }
+});
