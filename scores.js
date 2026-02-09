@@ -57,9 +57,11 @@ function loadScores() {
           <span style="color: var(--correct-color);">CPM: <strong>${score.cpm}</strong></span>
           <span style="color: var(--incorrect-color);">Mistakes: <strong>${score.mistakes}</strong></span>
         </div>
+        ${score.duration && score.wordCount ? `
         <div class="mt-1 text-sm" style="color: var(--p-text-color);">
           ${score.duration}s | ${score.wordCount} words
         </div>
+        ` : ''}
       </div>
     `;
   }).reverse().join('');
