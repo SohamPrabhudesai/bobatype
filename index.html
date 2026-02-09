@@ -20,221 +20,225 @@
       <span>Bobatype</span>
     </div>
 
-    <div class="flex flex-col items-center justify-center" style="min-height: calc(100vh - 150px);">
-    <div id="command-bar" class="flex justify-center gap-6 py-4 font-mono">
-      <button
-        id="themes-btn"
-        class="transition-colors"
-        style="color: var(--correct-color)"
-      >
-        themes
-      </button>
-      <button
-        id="settings-btn"
-        class="transition-colors"
-        style="color: var(--correct-color)"
-      >
-        settings
-      </button>
-      <a
-        href="scores.html"
-        class="transition-colors"
-        style="color: var(--correct-color); text-decoration: none"
-        >scores</a
-      >
-    </div>
-
     <div
-      id="themes-wrapper"
-      class="hidden justify-center items-center align-middle overflow-auto"
+      class="flex flex-col items-center justify-center"
+      style="min-height: calc(100vh - 150px)"
     >
+      <div id="command-bar" class="flex justify-center gap-6 py-4 font-mono">
+        <button
+          id="themes-btn"
+          class="transition-colors"
+          style="color: var(--correct-color)"
+        >
+          themes
+        </button>
+        <button
+          id="settings-btn"
+          class="transition-colors"
+          style="color: var(--correct-color)"
+        >
+          settings
+        </button>
+        <a
+          href="scores.html"
+          class="transition-colors"
+          style="color: var(--correct-color); text-decoration: none"
+          >scores</a
+        >
+      </div>
+
       <div
-        id="themes"
-        class="bg-[var(--main-bg-color)] py-5 rounded-lg overflow-y-scroll"
+        id="themes-wrapper"
+        class="hidden justify-center items-center align-middle overflow-auto"
       >
-        <nav
-          id="themes-list"
-          class="flex flex-col gap-6 font-mono overflow-y-scroll"
-        >
-          <h2
-            class="flex flex-row justify-center text-xl text-[var(--correct-color)]"
-          >
-            Select a theme:
-          </h2>
-          <ul class="flex flex-col gap-8 text-lg z-50">
-            <li
-              class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
-            >
-              <button id="default">Default</button>
-            </li>
-            <li
-              class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
-            >
-              <button id="coffee">Coffee</button>
-            </li>
-            <li
-              class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
-            >
-              <button id="code">Code</button>
-            </li>
-            <li
-              class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
-            >
-              <button id="beach">Beach</button>
-            </li>
-            <li
-              class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
-            >
-              <button id="lavender">Lavender</button>
-            </li>
-            <li
-              class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
-            >
-              <button id="mintyfresh">Minty Fresh</button>
-            </li>
-            <li
-              class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
-            >
-              <button id="cherry">Cherry Blossom</button>
-            </li>
-            <li
-              class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
-            >
-              <button id="mintchoc">Mint Chocolate</button>
-            </li>
-            <li
-              class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
-            >
-              <button id="cottonCandy">Cotton Candy</button>
-            </li>
-            <li
-              class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
-            >
-              <button id="sunset">Sunset</button>
-            </li>
-            <li
-              class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
-            >
-              <button id="ocean">Ocean</button>
-            </li>
-            <li
-              class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
-            >
-              <button id="forest">Forest</button>
-            </li>
-            <li
-              class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
-            >
-              <button id="dracula">Dracula</button>
-            </li>
-            <li
-              class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
-            >
-              <button id="monokai">Monokai</button>
-            </li>
-            <li
-              id="hellokitty-item"
-              class="hidden flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
-            >
-              <button id="hellokitty">Hello Kitty</button>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-
-    <div id="settings-wrapper" class="hidden">
-      <div id="settings" class="py-8 px-12 rounded-lg">
-        <h2
-          class="text-2xl font-mono mb-6 text-center"
-          style="color: var(--correct-color)"
-        >
-          Settings
-        </h2>
         <div
-          class="flex flex-col gap-6 font-mono"
-          style="color: var(--correct-color)"
+          id="themes"
+          class="bg-[var(--main-bg-color)] py-5 rounded-lg overflow-y-scroll"
         >
-          <div class="flex justify-between items-center gap-8">
-            <label>Font Size:</label>
-            <select id="font-size" class="rounded px-3 py-1">
-              <option value="1.5rem">Small</option>
-              <option value="2rem" selected>Medium</option>
-              <option value="2.5rem">Large</option>
-              <option value="3rem">Extra Large</option>
-            </select>
-          </div>
-          <div class="flex justify-between items-center gap-8">
-            <label>Test Duration:</label>
-            <select id="test-duration" class="rounded px-3 py-1">
-              <option value="15">15s</option>
-              <option value="30" selected>30s</option>
-              <option value="60">60s</option>
-              <option value="120">120s</option>
-            </select>
-          </div>
-          <div class="flex justify-between items-center gap-8">
-            <label>Word Count:</label>
-            <select id="word-count" class="rounded px-3 py-1">
-              <option value="25">25</option>
-              <option value="50" selected>50</option>
-              <option value="100">100</option>
-            </select>
+          <nav
+            id="themes-list"
+            class="flex flex-col gap-6 font-mono overflow-y-scroll"
+          >
+            <h2
+              class="flex flex-row justify-center text-xl text-[var(--correct-color)]"
+            >
+              Select a theme:
+            </h2>
+            <ul class="flex flex-col gap-8 text-lg z-50">
+              <li
+                class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
+              >
+                <button id="default">Default</button>
+              </li>
+              <li
+                class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
+              >
+                <button id="coffee">Coffee</button>
+              </li>
+              <li
+                class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
+              >
+                <button id="code">Code</button>
+              </li>
+              <li
+                class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
+              >
+                <button id="beach">Beach</button>
+              </li>
+              <li
+                class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
+              >
+                <button id="lavender">Lavender</button>
+              </li>
+              <li
+                class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
+              >
+                <button id="mintyfresh">Minty Fresh</button>
+              </li>
+              <li
+                class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
+              >
+                <button id="cherry">Cherry Blossom</button>
+              </li>
+              <li
+                class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
+              >
+                <button id="mintchoc">Mint Chocolate</button>
+              </li>
+              <li
+                class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
+              >
+                <button id="cottonCandy">Cotton Candy</button>
+              </li>
+              <li
+                class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
+              >
+                <button id="sunset">Sunset</button>
+              </li>
+              <li
+                class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
+              >
+                <button id="ocean">Ocean</button>
+              </li>
+              <li
+                class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
+              >
+                <button id="forest">Forest</button>
+              </li>
+              <li
+                class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
+              >
+                <button id="dracula">Dracula</button>
+              </li>
+              <li
+                class="flex flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
+              >
+                <button id="monokai">Monokai</button>
+              </li>
+              <li
+                id="hellokitty-item"
+                class="hidden flex-row justify-center hover:font-bold hover:bg-[var(--correct-color)] text-[var(--correct-color)] hover:text-[var(--main-bg-color)]"
+              >
+                <button id="hellokitty">Hello Kitty</button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div id="settings-wrapper" class="hidden">
+        <div id="settings" class="py-8 px-12 rounded-lg">
+          <h2
+            class="text-2xl font-mono mb-6 text-center"
+            style="color: var(--correct-color)"
+          >
+            Settings
+          </h2>
+          <div
+            class="flex flex-col gap-6 font-mono"
+            style="color: var(--correct-color)"
+          >
+            <div class="flex justify-between items-center gap-8">
+              <label>Font Size:</label>
+              <select id="font-size" class="rounded px-3 py-1">
+                <option value="1.5rem">Small</option>
+                <option value="2rem" selected>Medium</option>
+                <option value="2.5rem">Large</option>
+                <option value="3rem">Extra Large</option>
+              </select>
+            </div>
+            <div class="flex justify-between items-center gap-8">
+              <label>Test Duration:</label>
+              <select id="test-duration" class="rounded px-3 py-1">
+                <option value="15">15s</option>
+                <option value="30" selected>30s</option>
+                <option value="60">60s</option>
+                <option value="120">120s</option>
+              </select>
+            </div>
+            <div class="flex justify-between items-center gap-8">
+              <label>Word Count:</label>
+              <select id="word-count" class="rounded px-3 py-1">
+                <option value="25">25</option>
+                <option value="50" selected>50</option>
+                <option value="100">100</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div id="mainwrap" class="relative wrapper bg-[var(--main-bg-color)]">
-      <input type="text" class="input-field opacity-0" />
-      <div class="content-box">
-        <div class="typing-text">
-          <p id="paragraph" class="text-[var(--p-text-color)]"></p>
-        </div>
-        <div class="content">
-          <ul class="result-details">
-            <li class="time">
-              <p>Time Left:</p>
-              <span><b>30</b>s</span>
-            </li>
-            <li class="mistake">
-              <p>Mistakes:</p>
-              <span>0</span>
-            </li>
-            <li class="wpm">
-              <p>WPM:</p>
-              <span>0</span>
-            </li>
-            <li class="cpm">
-              <p>CPM:</p>
-              <span>0</span>
-            </li>
-          </ul>
+      <div id="mainwrap" class="relative wrapper bg-[var(--main-bg-color)]">
+        <input type="text" class="input-field opacity-0" />
+        <div class="content-box">
+          <div class="typing-text">
+            <p id="paragraph" class="text-[var(--p-text-color)]"></p>
+          </div>
+          <div class="content">
+            <ul class="result-details">
+              <li class="time">
+                <p>Time Left:</p>
+                <span><b>30</b>s</span>
+              </li>
+              <li class="mistake">
+                <p>Mistakes:</p>
+                <span>0</span>
+              </li>
+              <li class="wpm">
+                <p>WPM:</p>
+                <span>0</span>
+              </li>
+              <li class="cpm">
+                <p>CPM:</p>
+                <span>0</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div
-      id="inst"
-      class="flex flex-col gap-1 justify-center items-center font-mono text-sm mt-4"
-      style="color: var(--p-text-color)"
-    >
-      <p>
-        Press <span style="color: var(--correct-color)">Escape</span> to restart
-        | Press <span style="color: var(--correct-color)">Tab</span> to close
-        menus
-      </p>
-      <span
-        id="secret-hint"
-        style="
-          font-size: 0.6rem;
-          color: var(--p-text-color);
-          opacity: 0.6;
-          display: none;
-        "
-        >secret theme for nini 🎀</span
+      <div
+        id="inst"
+        class="flex flex-col gap-1 justify-center items-center font-mono text-sm mt-4"
+        style="color: var(--p-text-color)"
       >
-    </div>
+        <p>
+          Press <span style="color: var(--correct-color)">Escape</span> to
+          restart | Press
+          <span style="color: var(--correct-color)">Tab</span> to close menus
+        </p>
+        <p>Built by Soham Prabhudesai</p>
+        <span
+          id="secret-hint"
+          style="
+            font-size: 0.6rem;
+            color: var(--p-text-color);
+            opacity: 0.6;
+            display: none;
+          "
+          >secret theme for nini 🎀</span
+        >
+      </div>
     </div>
   </body>
 </html>
