@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Bobatype</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="input.css" />
+  </head>
+  <body class="flex-col">
+    <div id="bobahead" class="py-5 px-3 z-[100]" style="display: flex; justify-content: center">
+      <img src="WhatsApp Image 2026-02-13 at 6.50.55 PM.jpeg" alt="Header" style="max-height: 80px; object-fit: contain" />
+    </div>
+
+    <div class="flex flex-col items-center justify-center" style="min-height: calc(100vh - 150px)">
+      <div id="command-bar" class="flex justify-center gap-6 py-4 font-mono">
+        <a href="index.html" class="transition-colors" style="color: var(--correct-color); text-decoration: none">← back</a>
+      </div>
+
+      <div class="wrapper" style="max-width: 420px; margin: 0 auto; padding: 35px">
+        <div class="content-box">
+          <div class="flex gap-6 font-mono mb-8 justify-center">
+            <button id="tab-login" onclick="showTab('login')" style="color: var(--correct-color); font-size: 1.1rem; font-weight: 700; background: none; border: none; cursor: pointer; border-bottom: 2px solid var(--correct-color); padding-bottom: 4px;">login</button>
+            <button id="tab-register" onclick="showTab('register')" style="color: var(--p-text-color); font-size: 1.1rem; background: none; border: none; cursor: pointer; padding-bottom: 4px;">register</button>
+          </div>
+
+          <form id="auth-form" class="flex flex-col gap-6 font-mono">
+            <div class="flex flex-col gap-6">
+              <input
+                id="input-username"
+                type="text"
+                placeholder="username"
+                autocomplete="username"
+                style="
+                  background: none;
+                  border: none;
+                  border-bottom: 1px solid var(--p-text-color);
+                  color: var(--correct-color);
+                  font-family: monospace;
+                  font-size: 1rem;
+                  padding: 6px 0;
+                  outline: none;
+                  width: 100%;
+                "
+              />
+              <input
+                id="input-password"
+                type="password"
+                placeholder="password"
+                autocomplete="current-password"
+                style="
+                  background: none;
+                  border: none;
+                  border-bottom: 1px solid var(--p-text-color);
+                  color: var(--correct-color);
+                  font-family: monospace;
+                  font-size: 1rem;
+                  padding: 6px 0;
+                  outline: none;
+                  width: 100%;
+                "
+              />
+            </div>
+
+            <p id="error-msg" style="color: var(--incorrect-color); font-size: 0.85rem; min-height: 1.2em;"></p>
+
+            <button
+              type="submit"
+              style="
+                background: none;
+                border: 1px solid var(--correct-color);
+                color: var(--correct-color);
+                font-family: monospace;
+                font-size: 1rem;
+                padding: 8px 0;
+                cursor: pointer;
+                transition: background 0.15s, color 0.15s;
+              "
+              onmouseover="this.style.background='var(--correct-color)'; this.style.color='var(--main-bg-color)'"
+              onmouseout="this.style.background='none'; this.style.color='var(--correct-color)'"
+            >
+              login
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script type="module">
+      import { login, register } from "./auth.js";
+
+      const BACKEND_URL = "http://localhost:4000/graphql";
+
+      // Redirect if already logged in
+      if (localStorage.getItem("token")) {
+        window.location.href = "index.html";
+      }
+
+      // Apply saved theme
+      const themeColors = {
+        coffee: { bg: "#CEB18D", boba: "rgb(25 16 14)", text: "rgb(255 255 255)", correct: "rgb(25 16 14)", incorrect: "rgb(230, 84, 99)", caret: "rgb(25 16 14)" },
+        code: { bg: "rgb(0,0,0)", boba: "rgb(53, 160, 0)", text: "rgb(22, 65, 0)", correct: "rgb(53, 160, 0)", incorrect: "rgb(202, 71, 84)", caret: "rgb(53, 160, 0)" },
+        beach: { bg: "rgb(255, 184, 124)", boba: "rgb(51, 102, 153)", text: "rgb(153, 85, 51)", correct: "rgb(255, 255, 255)", incorrect: "rgb(255, 102, 102)", caret: "rgb(255, 193, 7)" },
+        lavender: { bg: "rgb(200, 190, 230)", boba: "rgb(50, 50, 100)", text: "rgb(100, 84, 143)", correct: "rgb(255, 255, 255)", incorrect: "rgb(255, 140, 180)", caret: "rgb(138, 43, 226)" },
+        mintyfresh: { bg: "rgb(173, 255, 199)", boba: "rgb(0, 102, 68)", text: "rgb(0, 68, 45)", correct: "rgb(255, 255, 255)", incorrect: "rgb(255, 69, 0)", caret: "rgb(0, 204, 102)" },
+        cherry: { bg: "rgb(255, 223, 230)", boba: "rgb(128, 0, 64)", text: "rgb(51, 51, 51)", correct: "rgb(210, 0, 126)", incorrect: "rgb(90, 0, 0)", caret: "rgb(255, 105, 180)" },
+        mintchoc: { bg: "rgb(17, 17, 17)", boba: "rgb(255, 255, 255)", text: "rgb(255, 255, 255)", correct: "rgb(0, 255, 98)", incorrect: "rgb(255, 69, 0)", caret: "rgb(0, 191, 255)" },
+        cottonCandy: { bg: "rgb(255, 188, 217)", boba: "rgb(128, 0, 255)", text: "rgb(51, 51, 51)", correct: "rgb(0, 204, 255)", incorrect: "rgb(255, 69, 0)", caret: "rgb(255, 105, 180)" },
+        sunset: { bg: "rgb(255, 94, 77)", boba: "rgb(255, 223, 0)", text: "rgb(255, 179, 71)", correct: "rgb(255, 255, 255)", incorrect: "rgb(139, 0, 0)", caret: "rgb(255, 223, 0)" },
+        ocean: { bg: "rgb(0, 105, 148)", boba: "rgb(0, 180, 216)", text: "rgb(144, 224, 239)", correct: "rgb(255, 255, 255)", incorrect: "rgb(255, 87, 51)", caret: "rgb(0, 180, 216)" },
+        forest: { bg: "rgb(34, 139, 34)", boba: "rgb(144, 238, 144)", text: "rgb(152, 251, 152)", correct: "rgb(255, 255, 255)", incorrect: "rgb(255, 69, 0)", caret: "rgb(173, 255, 47)" },
+        dracula: { bg: "rgb(40, 42, 54)", boba: "rgb(189, 147, 249)", text: "rgb(98, 114, 164)", correct: "rgb(80, 250, 123)", incorrect: "rgb(255, 85, 85)", caret: "rgb(255, 121, 198)" },
+        monokai: { bg: "rgb(39, 40, 34)", boba: "rgb(249, 38, 114)", text: "rgb(117, 113, 94)", correct: "rgb(166, 226, 46)", incorrect: "rgb(249, 38, 114)", caret: "rgb(102, 217, 239)" },
+        hellokitty: { bg: "rgb(255, 182, 193)", boba: "rgb(255, 20, 147)", text: "rgb(255, 105, 180)", correct: "rgb(255, 255, 255)", incorrect: "rgb(220, 20, 60)", caret: "rgb(255, 20, 147)" },
+        default: { bg: "rgb(30 41 59)", boba: "rgb(255 255 255)", text: "rgb(71 85 105)", correct: "rgb(255 255 255)", incorrect: "rgb(202, 71, 84)", caret: "rgb(0 122 204)" },
+      };
+      const t = themeColors[localStorage.getItem("theme")] || themeColors.default;
+      const r = document.querySelector(":root").style;
+      r.setProperty("--main-bg-color", t.bg);
+      r.setProperty("--boba-color", t.boba);
+      r.setProperty("--p-text-color", t.text);
+      r.setProperty("--correct-color", t.correct);
+      r.setProperty("--incorrect-color", t.incorrect);
+      r.setProperty("--caret-color", t.caret);
+
+      let mode = "login";
+
+      window.showTab = function (tab) {
+        mode = tab;
+        const submitBtn = document.querySelector("#auth-form button[type=submit]");
+        const loginTab = document.getElementById("tab-login");
+        const registerTab = document.getElementById("tab-register");
+        document.getElementById("error-msg").textContent = "";
+
+        if (tab === "login") {
+          loginTab.style.color = "var(--correct-color)";
+          loginTab.style.borderBottom = "2px solid var(--correct-color)";
+          loginTab.style.fontWeight = "700";
+          registerTab.style.color = "var(--p-text-color)";
+          registerTab.style.borderBottom = "none";
+          registerTab.style.fontWeight = "normal";
+          submitBtn.textContent = "login";
+        } else {
+          registerTab.style.color = "var(--correct-color)";
+          registerTab.style.borderBottom = "2px solid var(--correct-color)";
+          registerTab.style.fontWeight = "700";
+          loginTab.style.color = "var(--p-text-color)";
+          loginTab.style.borderBottom = "none";
+          loginTab.style.fontWeight = "normal";
+          submitBtn.textContent = "register";
+        }
+      };
+
+      document.getElementById("auth-form").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const username = document.getElementById("input-username").value.trim();
+        const password = document.getElementById("input-password").value;
+        const errorMsg = document.getElementById("error-msg");
+        const submitBtn = e.target.querySelector("button[type=submit]");
+
+        errorMsg.textContent = "";
+        submitBtn.disabled = true;
+
+        try {
+          if (mode === "login") {
+            await login(username, password);
+          } else {
+            await register(username, password);
+          }
+          window.location.href = "index.html";
+        } catch (err) {
+          errorMsg.textContent = err.message;
+        } finally {
+          submitBtn.disabled = false;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "outputDirectory": ".",
+  "ignoreCommand": "exit 0",
+  "functions": {}
+}

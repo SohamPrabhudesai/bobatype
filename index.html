@@ -9,6 +9,20 @@
     <link rel="stylesheet" href="input.css" />
     <script src="words.js" defer></script>
     <script src="script.js" defer></script>
+    <script type="module">
+      import { isLoggedIn, getUsername, logout } from "./auth.js";
+      const authLink = document.getElementById("auth-link");
+      if (isLoggedIn()) {
+        authLink.textContent = getUsername();
+        authLink.href = "#";
+        authLink.addEventListener("click", (e) => {
+          e.preventDefault();
+          logout();
+          authLink.textContent = "login";
+          authLink.href = "login.html";
+        });
+      }
+    </script>
   </head>
   <body class="flex-col">
     <div class="backdrop"></div>
@@ -40,6 +54,13 @@
           class="transition-colors"
           style="color: var(--correct-color); text-decoration: none"
           >scores</a
+        >
+        <a
+          id="auth-link"
+          href="login.html"
+          class="transition-colors"
+          style="color: var(--correct-color); text-decoration: none"
+          >login</a
         >
       </div>
 
